@@ -67,6 +67,7 @@ function Start() {
     textoScore = document.querySelector(".score");
     dino = document.querySelector(".dino");
     document.addEventListener("keydown", HandleKeyDown);
+    document.addEventListener("touchstart", HandleTouchStart);
 }
 
 function Update() {
@@ -87,6 +88,10 @@ function HandleKeyDown(ev){
     if(ev.keyCode == 32){
         Saltar();
     }
+}
+
+function HandleTouchStart(ev) {
+    Saltar();
 }
 
 function Saltar(){
